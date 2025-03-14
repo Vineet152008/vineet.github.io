@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Vineet Kamble</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .thank-you-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--background-color);
+        }
+        
+        .thank-you-card {
+            background-color: var(--surface-color);
+            border-radius: 1rem;
+            padding: 3rem;
+            max-width: 600px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease;
+        }
+        
+        .thank-you-icon {
+            font-size: 5rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+        }
+        
+        .thank-you-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        
+        .thank-you-message {
+            font-size: 1.2rem;
+            color: var(--text-color-light);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .return-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        
+        .return-btn:hover {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="thank-you-card">
+            <i class="fas fa-check-circle thank-you-icon"></i>
+            <h1 class="thank-you-title">Thank You!</h1>
+            <p class="thank-you-message">Your message has been successfully sent. I appreciate you contacting me and will respond as soon as possible.</p>
+            <a href="index.html" class="return-btn">Return to Homepage</a>
+        </div>
+    </div>
+    
+    <script>
+        // Auto redirect after 5 seconds
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 5000);
+    </script>
+</body>
+</html> 

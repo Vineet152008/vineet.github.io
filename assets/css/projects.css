@@ -1,0 +1,193 @@
+/* Projects Section Styles */
+.projects-section {
+    background-color: #0a192f;
+    padding: 80px 0;
+    position: relative;
+}
+
+.section-header h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff3366, #6c63ff);
+    margin: 0 auto 40px;
+    display: block;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background-color: #0d1b30;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(100, 255, 218, 0.2);
+    border-color: rgba(100, 255, 218, 0.3);
+}
+
+.project-img {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.project-info p {
+    color: #a8b2d1;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.project-tech span {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-links {
+    margin-top: auto;
+    display: flex;
+    gap: 15px;
+}
+
+.project-link {
+    color: #64ffda;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: rgba(100, 255, 218, 0.1);
+    border-radius: 5px;
+}
+
+.project-link:hover {
+    background-color: rgba(100, 255, 218, 0.2);
+    transform: translateY(-2px);
+}
+
+.project-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: transparent;
+    color: #a8b2d1;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    padding: 10px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    border-color: #64ffda;
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: rgba(100, 255, 218, 0.15);
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+}
+
+/* Add a subtle glow effect to project cards */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 0 0 rgba(100, 255, 218, 0);
+    transition: box-shadow 0.3s ease;
+    z-index: -1;
+}
+
+.project-card:hover::before {
+    box-shadow: 0 0 20px 5px rgba(100, 255, 218, 0.1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .project-info {
+        padding: 20px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+} 
